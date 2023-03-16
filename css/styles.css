@@ -25,7 +25,8 @@ a {
 p,
 h1,
 h2,
-h3 {
+h3,
+li {
   margin: 0;
   padding: 0;
 }
@@ -55,9 +56,9 @@ form {
 @media screen and (min-width: 768px) {
   .container {
     width: 100%;
-    max-width: 768px;
+    max-width: 582px;
     margin: 0 auto;
-    padding: 0 108px;
+    padding: 0 15px;
   }
   .section {
     padding-top: 96px;
@@ -138,6 +139,7 @@ form {
   .header {
     border-bottom: 1px solid #e7e9fc;
     padding-top: 24px;
+    padding-bottom: 10px;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
@@ -177,7 +179,7 @@ form {
   }
   .nav-main-item.current::after {
     position: absolute;
-    top: 43px;
+    top: 40px;
     content: "";
     display: block;
     width: 100%;
@@ -186,6 +188,7 @@ form {
     border-radius: 2px;
   }
   .contacts {
+    display: block;
     color: var(--secondary-text-color);
     font-style: normal;
     font-weight: 400;
@@ -200,6 +203,7 @@ form {
     font-style: normal;
   }
   .header-flex {
+    min-width: 768px;
     padding: 0 15px;
     display: flex;
     justify-content: space-between;
@@ -221,10 +225,12 @@ form {
   .contacts-list {
     display: flex;
     flex-direction: column;
+    row-gap: 4px;
   }
   .contact {
     margin: 0;
     padding: 0;
+    height: 16px;
   }
   .burger {
     display: none;
@@ -274,7 +280,7 @@ form {
   }
   .nav-main-item.current::after {
     position: absolute;
-    top: 43px;
+    top: 41px;
     content: "";
     display: block;
     width: 100%;
@@ -316,6 +322,7 @@ form {
   .contacts-list {
     display: flex;
     flex-direction: row;
+    height: 24px;
   }
 
   .contact {
@@ -404,7 +411,9 @@ form {
   }
   .mobile-socials {
     display: flex;
-    column-gap: 56px;
+    justify-content: space-between;
+    max-width: 328px;
+    /* column-gap: 56px; */
   }
 }
 @media screen and (min-width: 768px) {
@@ -488,7 +497,7 @@ form {
   }
   .hero-text {
     color: #ffffff;
-    width: 496px;
+    max-width: 496px;
     margin: 0 auto 40px auto;
     font-style: normal;
     font-weight: 700;
@@ -539,6 +548,7 @@ form {
     width: 496px;
     margin: 0 auto 72px auto;
     font-style: normal;
+    max-width: 496px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -648,7 +658,7 @@ form {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.02em;
     text-transform: capitalize;
   }
@@ -697,6 +707,7 @@ form {
     margin-bottom: 8px;
   }
   .desc-text {
+    font-weight: 400;
     font-size: 16px;
     color: var(--secondary-text-color);
     line-height: 1.5;
@@ -1278,9 +1289,13 @@ form {
   }
   .sub-label {
     margin-right: 24px;
+    margin-bottom: 0;
+    min-width: 264px;
+    width: 264px;
   }
   .mail-sub {
     background-color: inherit;
+    margin: 0;
     width: 264px;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1392,10 +1407,14 @@ form {
     display: flex;
   }
   .sub-label {
+    margin-bottom: 0;
+    min-width: 264px;
+    width: 264px;
     margin-right: 24px;
   }
   .mail-sub {
     background-color: inherit;
+    margin: 0;
     width: 264px;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1441,7 +1460,7 @@ form {
 /* main modal */
 /* modal */
 .backdrop {
-  padding: 88px 0;
+  /* padding: 88px 0; */
   position: fixed;
   top: 0;
   left: 0;
@@ -1451,7 +1470,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 88px 0;
+  /* padding: 88px 0; */
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1462,10 +1481,10 @@ form {
 }
 .modal {
   position: relative;
-  width: 100%;
-  max-width: 408px;
-  height: 100%;
-  max-height: 584px;
+  /* width: 100%; */
+  /* max-width: 408px; */
+  /* height: 100%; */
+  /* max-height: 584px; */
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1607,6 +1626,8 @@ form {
   display: flex;
 }
 .checkmark {
+  position: absolute;
+  top: -1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1624,6 +1645,7 @@ form {
   fill: #fcfcfc;
 }
 .privacy-text {
+  padding-left: 24px;
   font-style: normal;
   font-size: 12px;
   line-height: 1.33;
